@@ -1,5 +1,6 @@
 import { all } from 'redux-saga/effects';
 import userSaga from './userSaga';
+import ownerSaga from './ownerSaga';
 
 
 // rootSaga is the primary saga.
@@ -12,6 +13,6 @@ import userSaga from './userSaga';
 export default function* rootSaga() {
   yield all([
     userSaga(),
-    // ownerSaga(),
+    ownerSaga(),
   ]);
 }
