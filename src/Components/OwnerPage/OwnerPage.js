@@ -23,7 +23,6 @@ class OwnerPage extends Component() {
 
     render() {
 
-
         return (
             <div>
                 <TextField required defaultValue={this.state.owner_name} onChange={this.handleNameChange}></TextField>
