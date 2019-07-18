@@ -32,7 +32,7 @@ const store = createStore(
 sagaMiddleware.run(rootSaga);
 
 import './index.css';
-import App from './App';
+import App from './Components/App/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
