@@ -2,19 +2,27 @@ import React, { Component } from 'react'
 
 class Dashboard extends Component {
 state = {
-    newOwner: ''
+    newPet: {
+        pet_name: '',
+        color: '',
+        breed: '',
+        owner_name: ''
+
+    }
 }
 
 handleInputNewOwner = (event) => {
     this.setState({
-        newOwner: event.target.value
+        newPet: {
+            
+        } 
     })
     console.log(event.target.value)
 }
     render() {
         return (
             <>
-                <h2>Add Owner</h2>
+                <h2>Add Pet</h2>
                 <input
                     type="text"
                     className="addOwnerName"
@@ -23,6 +31,7 @@ handleInputNewOwner = (event) => {
                     value={this.state.newOwner}
                     key={'new owner input'}>
                 </input>
+                <button>Submit</button>
 
             </>
         )
