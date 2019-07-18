@@ -14,11 +14,16 @@ class Dashboard extends Component {
     handleInputNewPet = (petdetail) => (event) => {
         this.setState({
             newPet: {
-                ...this.state.newPlant,
+                ...this.state.newPet,
                 [petdetail]: event.target.value,
             }
         })
         console.log(event.target.value)
+    }
+
+    addNewPet = event => {
+        event.preventDefault();
+        console.log('submit clicked')
     }
     render() {
         return (
