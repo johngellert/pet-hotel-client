@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Dashboard extends Component {
     state = {
@@ -23,6 +24,7 @@ class Dashboard extends Component {
 
     addNewPet = event => {
         event.preventDefault();
+        this.props.dispatch({ type: 'ADD_NEW_PET', payload: this.state.newPet });
         console.log('submit clicked')
     }
     render() {
@@ -85,4 +87,8 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+const mapStateToProps = reduxState => ({
+    reduxState,
+});
+
+export default connect(mapStateToProps)(Dashboard);
