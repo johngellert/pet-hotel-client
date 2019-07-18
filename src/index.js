@@ -4,11 +4,13 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
+import './index.css';
+import App from './Components/App/App';
+import * as serviceWorker from './serviceWorker';
 
 import rootReducer from './redux/reducers'; // imports ./redux/reducers/index.js
 import rootSaga from './redux/sagas'; // imports ./redux/sagas/index.js
 
-import App from './components/App/App';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -30,10 +32,6 @@ const store = createStore(
 // tells the saga middleware to use the rootSaga
 // rootSaga contains all of our other sagas
 sagaMiddleware.run(rootSaga);
-
-import './index.css';
-import App from './Components/App/App';
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
