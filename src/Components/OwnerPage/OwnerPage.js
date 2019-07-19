@@ -25,6 +25,7 @@ class OwnerPage extends Component {
 
         return (
             <div>
+                <h2>Pet Owners</h2>
                 <TextField 
                 required 
                 defaultValue={this.state.owner_name} 
@@ -33,9 +34,9 @@ class OwnerPage extends Component {
                 variant="outlined"></TextField>
                 <Button onClick={this.handleSubmitClick}>Submit</Button>
 
-                <pre>
+                {/* <pre>
                     {JSON.stringify(this.state, null, 2)}
-                </pre>
+                </pre> */}
             </div>
 
         );
